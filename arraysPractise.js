@@ -158,8 +158,54 @@ function categorizeNumbers(arr) {
 
     return categories;
 }
+/**
+ * Function to replace values in an array based on divisibility rules:
+ * - Numbers divisible by both 3 and 5 are replaced with "fizzbuzz".
+ * - Numbers divisible by only 3 are replaced with "fizz".
+ * - Numbers divisible by only 5 are replaced with "buzz".
+ * 
+ * @param {number[]} arr - Array of numbers to be processed.
+ * @returns {(string|number)[]} A new array where numbers are replaced according to the rules.
+ */
+function replaceValues(arr) {
+    let finalValues = [];
+    
+    for (let num of arr) {
+        if (num % 3 === 0 && num % 5 === 0) {
+            finalValues.push("fizzbuzz");
+        } else if (num % 3 === 0) {
+            finalValues.push("fizz");
+        } else if (num % 5 === 0) {
+            finalValues.push("buzz");
+        } else {
+            finalValues.push(num);  // Keep the original number if none of the conditions match
+        }
+    }
+    
+    return finalValues;
+}
 
-// Example usages
+// console.log(replaceValues([1, 3, 5, 15, 8])); // Output: [1, "fizz", "buzz", "fizzbuzz", 8]
+/**
+ * Function to move all zeros in an array to the end,
+ * while maintaining the order of non-zero elements.
+ * 
+ * @param {number[]} arr - The input array of numbers.
+ * @returns {number[]} The modified array with all zeros at the end.
+ */
+function moveZerosToEnd(arr) {
+    let nonZeroIndex = 0; 
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+            if (nonZeroIndex !== i) {
+                [arr[nonZeroIndex], arr[i]] = [arr[i], arr[nonZeroIndex]]; 
+            }
+            nonZeroIndex++;
+        }
+    }
+    return arr;
+}
+console.log(moveZerosToEnd([1, 0, 2, 0, 3, 0, 4])); // Output: [1, 2, 3, 4, 0, 0, 0]
 console.log(filterEvenOdd([1, 2, 3, 4, 5, 6])); // Output: { even: [2, 4, 6], odd: [1, 3, 5] }
 console.log(filterEvenOddTernary([1, 2, 3, 4, 5, 6])); // Output: [[2, 4, 6], [1, 3, 5]]
 console.log(filterEvenOddReduce([1, 2, 3, 4, 5, 6])); // Output: [[2, 4, 6], [1, 3, 5]]
