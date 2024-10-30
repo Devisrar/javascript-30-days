@@ -213,3 +213,4 @@ console.log(replaceNegatives([-1, 2, -3, 4, -5])); // Output: [0, 2, 0, 4, 0]
 console.log(greaterThanAverage([1, 2, 3, 4, 5, 6])); // Output: [5, 6]
 console.log(removeDuplicates([5, 15, 20, 5, 10, 15])); // Output: [5, 15, 20, 10]
 console.log(categorizeNumbers([5, 15, 25, 8, 12, 21])); // Output: { small: [5, 8], medium: [15, 12], large: [25, 21] }
+
