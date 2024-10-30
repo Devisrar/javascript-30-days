@@ -18,8 +18,22 @@
  *    - Iterating over objects with `for...in`.
  *    - Deep cloning for independent copies.
  *    - Optional chaining and nullish coalescing operators (ES2020).
+ * 10. **Objects in JavaScript**: Understanding objects as non-primitive data types, stack and heap memory allocation.
  *
  * This guide provides examples for each concept, demonstrating key operations and best practices for handling JavaScript objects.
+ */
+
+/**
+ * Objects in JavaScript:
+ * An **object** is a collection of key-value pairs that can include properties (data) and methods (functions).
+ * Objects are categorized as **non-primitive** data types because they can contain multiple values and are mutable.
+ * Unlike primitives, which store a single value, objects can store complex collections of data.
+ *
+ * **Memory Storage**:
+ * Objects in JavaScript are stored in **heap memory**, with references to these objects kept in **stack memory**.
+ * When you create an object, JavaScript stores the object data in the heap, while only a reference to that
+ * data is stored in the stack. This memory structure allows objects to be referenced and modified without
+ * duplicating data, making objects more flexible and dynamic in use.
  */
 
 const mysymbol = Symbol('israr'); // Symbol declaration to use as a unique key in the object
