@@ -205,6 +205,7 @@ function moveZerosToEnd(arr) {
     }
     return arr;
 }
+
 console.log(moveZerosToEnd([1, 0, 2, 0, 3, 0, 4])); // Output: [1, 2, 3, 4, 0, 0, 0]
 console.log(filterEvenOdd([1, 2, 3, 4, 5, 6])); // Output: { even: [2, 4, 6], odd: [1, 3, 5] }
 console.log(filterEvenOddTernary([1, 2, 3, 4, 5, 6])); // Output: [[2, 4, 6], [1, 3, 5]]
